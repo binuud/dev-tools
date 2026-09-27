@@ -52,10 +52,10 @@ function +vi-git-untracked() {
 
       # Append the counts to the vcs_info message if they are greater than 0
       if (( staged_count > 0 )); then
-          hook_com[staged]="+${staged_count}"
+          hook_com[staged]=" +${staged_count}"
       fi
       if (( untracked_count > 0 )); then
-          hook_com[unstaged]="?${untracked_count}"
+          hook_com[unstaged]=" ?${untracked_count}"
       fi
   fi
 }
@@ -63,7 +63,7 @@ function +vi-git-untracked() {
 # Configure basic vcs_info styles for Git
 zstyle ':vcs_info:*' enable git
 # %b = branch, %c = staged, %u = unstaged
-zstyle ':vcs_info:git:*' formats '%F{cyan}( %F{green}%b %F{yellow}%c %F{red}%u %F{cyan})'
+zstyle ':vcs_info:git:*' formats '%F{cyan}( %F{green}%b%F{yellow}%c%F{red}%u %F{cyan})'
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%c%u)'
 
 # Enable checking for staged (%c) and unstaged (%u) changes
