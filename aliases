@@ -1,0 +1,3 @@
+
+# To checkout master branch, and pull merge master from origin
+alias gitcpf="git checkout master;git pull origin master"
