@@ -1,6 +1,9 @@
 # Enable the Zsh completion system
 autoload -Uz compinit && compinit
 
+# Enable zsh hooks
+autoload -U add-zsh-hook
+
 # Speed up make completion by targeting explicit targets
 zstyle ':completion:*:*:make:*' tag-order 'targets'
 
