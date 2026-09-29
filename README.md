@@ -1,6 +1,11 @@
 # dev-tools
 Tools for running a development environment
 
+## install.sh
+
+* Clone brew into home directory
+* Create an python environment called ai
+
 ## zshrc
 
 Add the following in .zshrc file on root directory
