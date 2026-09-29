@@ -1,3 +1,10 @@
+
+# Force python env to be selected before running pip
+export PIP_REQUIRE_VIRTUALENV=true
+
+# disable sudo for home brew
+export HOMEBREW_NO_SUDO=1
+
 # Enable the Zsh completion system
 autoload -Uz compinit && compinit
 
@@ -119,3 +126,8 @@ PROMPT="\$(build_prompt)"
 
 # Force a Blinking Bar (Beam) cursor
 echo -ne '\e[1 q'
+
+#------------------------------------------------
+# Set PATH variable
+#------------------------------------------------
+export PATH="$HOME/.brew/bin:$HOME/.brew/sbin:$PATH"

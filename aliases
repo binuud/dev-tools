@@ -1,3 +1,11 @@
 
 # To checkout master branch, and pull merge master from origin
 alias gitcpf="git checkout master;git pull origin master"
+
+# enable python ai environment
+alias py-env-ai="source ~/Code/local/dev-tools/python-env/ai/bin/activate"
+
+# launch a golang container
+golang() {
+  docker run --rm -v $(pwd):/app -w /app -it dronasys-com/golang:1.27.1
+}
