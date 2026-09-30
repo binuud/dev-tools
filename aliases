@@ -9,3 +9,7 @@ alias py-env-ai="source ~/Code/local/dev-tools/python-env/ai/bin/activate"
 golang() {
   docker run --rm -v $(pwd):/app -w /app -it dronasys-com/golang:1.27.1
 }
+
+aws-docker() {
+  docker run --rm -ti -v ~/.aws:/root/.aws --entrypoint bash amazon/aws-cli
+}
