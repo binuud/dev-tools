@@ -23,5 +23,13 @@ In some controlled environment, we cannot install any third party plugins, this 
 
 Nerd font and fontawesome is used, you can remove the same if needed, in your fork. When using Terminal on macos, to use icons, select nerd font from the terminal settings.
 
+## Sample commands
+
+```
+alias proxy-server="ssh -i ~/.ssh/[PEMFILE] -D [PROXY-PORT] -N [user@hostname]"
+alias connect-server="ssh -i ~/.ssh/[PEMFILE] [user@hostname]"
+```
+
 ## References
 * [Ansii Font Control and Color Code](https://github.com/fidian/ansi)
+* [Unicode Symbols](https://en.wikipedia.org/wiki/List_of_Unicode_characters#Cuneiform)

@@ -32,6 +32,8 @@ COLOR_RESET="%f%k"
 
 # Powerline arrow symbols
 ARROW_RIGHT=$'\uE0B0'
+GIT_SYMBOL="⑂"
+CLOCK_SYMBOL="⏱"
 
 function preexec() {
   # Record the start time in seconds.microseconds
@@ -52,7 +54,7 @@ function time_taken_info() {
     
     # Print the execution time in yellow text
     #echo -e "\n\033[1;33m[ \ue641 Took ${formatted_time}s ]\033[0m\n"
-    echo -e "\n\033[0;33m[ \ue641 Took ${formatted_time}s ]\033[0m\n"
+    echo -e "\n\033[0;33m[ $CLOCK_SYMBOL Time ${formatted_time}s ]\033[0m\n"
     
     unset G_DEV_TOOLS_CMD_START
   fi
@@ -103,7 +105,7 @@ function build_prompt() {
 # Configure basic vcs_info styles for Git
 zstyle ':vcs_info:*' enable git
 # %b = branch, %c = staged, %u = unstaged
-zstyle ':vcs_info:git:*' formats "%K{$COLOR_GIT_BG}%F{$COLOR_GIT_FG}  %b%c%u  %k%f"
+zstyle ':vcs_info:git:*' formats "%K{$COLOR_GIT_BG}%F{$COLOR_GIT_FG} $GIT_SYMBOL [%b]%c%u %k%f"
 zstyle ':vcs_info:git:*' actionformats '(%b|%a%c%u)'
 
 # Enable checking for staged (%c) and unstaged (%u) changes
