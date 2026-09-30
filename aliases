@@ -5,11 +5,8 @@ alias gitcpf="git checkout master;git pull origin master"
 # enable python ai environment
 alias py-env-ai="source ~/Code/local/dev-tools/python-env/ai/bin/activate"
 
-# launch a golang container
-golang() {
-  docker run --rm -v $(pwd):/app -w /app -it dronasys-com/golang:1.27.1
-}
-
-aws-docker() {
-  docker run --rm -ti -v ~/.aws:/root/.aws --entrypoint bash amazon/aws-cli
-}
+## launch simple containers
+alias container-alpine="docker run --rm -it -v .:/data -w /data  alpine sh"
+alias container-busybox="docker run --rm -it -v .:/data -w /data busybox sh"
+alias container-golang="docker run --rm -it -v .:/app -w /app dronasys-com/golang:1.27.1"
+alias container-aws-cli="docker run --rm -it -v ~/.aws:/root/.aws --entrypoint bash amazon/aws-cli"

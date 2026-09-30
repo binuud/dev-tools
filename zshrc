@@ -32,7 +32,7 @@ COLOR_RESET="%f%k"
 
 # Powerline arrow symbols
 ARROW_RIGHT=$'\uE0B0'
-GIT_SYMBOL="⑂"
+GIT_SYMBOL=""
 CLOCK_SYMBOL="⏱"
 
 function preexec() {
