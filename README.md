@@ -36,7 +36,7 @@ source ~/[PATH]/dev-tools/aliases
 
 In some controlled environment, we cannot install any third party plugins, this is a straight implementation using zsh vanilla function.
 
-Nerd font and fontawesome is used, you can remove the same if needed, in your fork. When using Terminal on macos, to use icons, select nerd font from the terminal settings.
+If you want to use Nerd fonts, please fork this project. The ZSHRC file is configurable.
 
 ## Sample commands
 
