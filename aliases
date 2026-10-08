@@ -10,3 +10,12 @@ alias container-alpine="docker run --rm -it -v .:/data -w /data  alpine sh"
 alias container-busybox="docker run --rm -it -v .:/data -w /data busybox sh"
 alias container-golang="docker run --rm -it -v .:/app -w /app dronasys-com/golang:1.27.1"
 alias container-aws-cli="docker run --rm -it -v ~/.aws:/root/.aws --entrypoint bash amazon/aws-cli"
+
+
+## llama.cpp aliases
+alias llm-qwen-3.5="llama-cli -hf ggml-org/Qwen3.5-0.8B-GGUF -ngl 99 --jinja --port 12434 -fa"
+alias llm-server-qwen-3.5="llama-server -hf ggml-org/Qwen3.5-0.8B-GGUF \
+  -ngl 99 --jinja \
+  --cors-origins "https://binuud.com"
+  --port 11434"
+alias check-mlx="python -c \"import mlx.core as mx; print('Metal available:', mx.metal.is_available())\""
