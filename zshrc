@@ -1,3 +1,7 @@
+## set history size
+export HISTSIZE=1000   # Number of lines kept in active memory
+export SAVEHIST=1000   # Number of lines actually saved on disk
+export HISTFILE=~/.zsh_history  # Location where the file is stored
 
 # Force python env to be selected before running pip
 export PIP_REQUIRE_VIRTUALENV=true
