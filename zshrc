@@ -136,4 +136,4 @@ echo -ne '\e[1 q'
 #------------------------------------------------
 # Set PATH variable
 #------------------------------------------------
-export PATH="$HOME/.brew/bin:$HOME/.brew/sbin:$PATH"
+export PATH="$PATH:$HOME/.brew/bin:$HOME/.brew/sbin"
